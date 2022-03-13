@@ -29,10 +29,10 @@ class TodayController: UIViewController {
         super.viewDidLoad()
         
         locationManager.delegate = self
+        weatherManager.delegate = self
+        
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        
-        weatherManager.delegate = self
     }
     
     @IBAction func onShare(_ sender: Any) {
