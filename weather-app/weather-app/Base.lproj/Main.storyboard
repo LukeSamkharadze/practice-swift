@@ -249,8 +249,20 @@
                     <view key="view" contentMode="scaleToFill" id="4hb-1F-LMz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rj1-Bu-bgN">
+                                <rect key="frame" x="155.5" y="437.5" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hab-6m-0k3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rj1-Bu-bgN" firstAttribute="centerY" secondItem="4hb-1F-LMz" secondAttribute="centerY" id="5Pc-tp-WPS"/>
+                            <constraint firstItem="rj1-Bu-bgN" firstAttribute="centerX" secondItem="4hb-1F-LMz" secondAttribute="centerX" id="ebO-k9-RWp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Forecast" id="4Hj-bj-0dH">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="Gdj-kI-N1G"/>
