@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="poC-e0-CoB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="passcode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWN-X9-uig">
+                                <rect key="frame" x="157.5" y="113" width="99" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZR7-Mg-IDS" customClass="DotsComponent" customModule="passcode" customModuleProvider="target">
+                                <rect key="frame" x="132" y="162" width="150" height="23"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Hfy-wd-tMd"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sNw-oe-e1A">
+                                <rect key="frame" x="30" y="260" width="354" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrI-FG-Y1B" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Jn0-Dc-0ce"/>
+                                            <constraint firstAttribute="width" constant="100" id="ijO-DN-ht6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="1"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value=" "/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-ke-2WJ" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="127" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="OTp-dZ-pdA"/>
+                                            <constraint firstAttribute="height" constant="100" id="Y0c-7e-rD5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value="A B C"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TG-XE-DNN" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="9UU-lf-A4S"/>
+                                            <constraint firstAttribute="width" constant="100" id="dfn-Vk-3Bt"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="3"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value="D E F"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-hd-pQN">
+                                <rect key="frame" x="30" y="390" width="354" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5SQ-c2-gk4" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="8NR-zR-FFG"/>
+                                            <constraint firstAttribute="height" constant="100" id="oar-W7-Lam"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="4"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value="G H I"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Nx-OZ-lby" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="127" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="5l7-dV-e25"/>
+                                            <constraint firstAttribute="width" constant="100" id="xBQ-xQ-Hcr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="5"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value="J K L"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y76-Aj-Tfv" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="3op-mC-vfL"/>
+                                            <constraint firstAttribute="height" constant="100" id="TEx-9k-Urg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="6"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value="M N O"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="s5d-px-5wj">
+                                <rect key="frame" x="30" y="520" width="354" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STz-Xo-rM9" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="BcE-H9-Psq"/>
+                                            <constraint firstAttribute="height" constant="100" id="eIT-xx-2NS"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="7"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value="P Q R S"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-cF-kBu" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="127" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="CJn-lX-hZF"/>
+                                            <constraint firstAttribute="width" constant="100" id="Dy2-Sz-NT7"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="8"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value="T U V"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Eq-Pw-cWh" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="9AS-EP-b8F"/>
+                                            <constraint firstAttribute="height" constant="100" id="bTz-dY-EFQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="9"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value="W X Y Z"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Ij-Tf-ROp">
+                                <rect key="frame" x="157" y="650" width="100" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6R-Rl-kZH" customClass="DigitComponent" customModule="passcode" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Jop-T5-rhL"/>
+                                            <constraint firstAttribute="width" constant="100" id="mVJ-vz-PXQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="digit" value="0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="characters" value=" "/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk3-yQ-yvn">
+                                <rect key="frame" x="292" y="680" width="81" height="38"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVG-TZ-C84"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s5d-px-5wj" secondAttribute="trailing" constant="30" id="3XX-hV-Ik8"/>
+                            <constraint firstItem="SNW-hd-pQN" firstAttribute="top" secondItem="sNw-oe-e1A" secondAttribute="bottom" constant="30" id="4lw-8k-KZ5"/>
+                            <constraint firstItem="sNw-oe-e1A" firstAttribute="top" secondItem="ZR7-Mg-IDS" secondAttribute="bottom" constant="75" id="5bH-bS-nIV"/>
+                            <constraint firstItem="5Ij-Tf-ROp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Oh-xA-lRN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SNW-hd-pQN" secondAttribute="trailing" constant="30" id="Ibt-ko-MR0"/>
+                            <constraint firstItem="s5d-px-5wj" firstAttribute="top" secondItem="SNW-hd-pQN" secondAttribute="bottom" constant="30" id="M7g-FJ-tc6"/>
+                            <constraint firstItem="ZR7-Mg-IDS" firstAttribute="top" secondItem="PWN-X9-uig" secondAttribute="bottom" constant="25" id="NUk-Bd-Nb8"/>
+                            <constraint firstItem="vk3-yQ-yvn" firstAttribute="leading" secondItem="5Ij-Tf-ROp" secondAttribute="trailing" constant="35" id="O8z-6m-51r"/>
+                            <constraint firstItem="5Ij-Tf-ROp" firstAttribute="top" secondItem="s5d-px-5wj" secondAttribute="bottom" constant="30" id="PaI-By-fvA"/>
+                            <constraint firstItem="PWN-X9-uig" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="PeZ-m0-huV"/>
+                            <constraint firstItem="SNW-hd-pQN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TMb-E3-qGw"/>
+                            <constraint firstItem="sNw-oe-e1A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gNy-xa-1sE"/>
+                            <constraint firstItem="vk3-yQ-yvn" firstAttribute="top" secondItem="s5d-px-5wj" secondAttribute="bottom" constant="60" id="gr0-Ap-6Dm"/>
+                            <constraint firstItem="ZR7-Mg-IDS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcu-a2-3Ze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sNw-oe-e1A" secondAttribute="trailing" constant="30" id="lqD-xY-5wG"/>
+                            <constraint firstItem="s5d-px-5wj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="tvE-Uh-HlF"/>
+                            <constraint firstItem="sNw-oe-e1A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="vy4-Um-5l5"/>
+                            <constraint firstItem="PWN-X9-uig" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zxp-AM-xQj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1pH-Sb-yjp"/>
+                    <connections>
+                        <outlet property="dotsComponent" destination="ZR7-Mg-IDS" id="ry9-hU-uYM"/>
+                        <outletCollection property="digitComponents" destination="QkD-ke-2WJ" collectionClass="NSMutableArray" id="9Tm-R7-fYk"/>
+                        <outletCollection property="digitComponents" destination="nrI-FG-Y1B" collectionClass="NSMutableArray" id="ZXJ-yw-eEq"/>
+                        <outletCollection property="digitComponents" destination="STz-Xo-rM9" collectionClass="NSMutableArray" id="7PS-XI-Vdt"/>
+                        <outletCollection property="digitComponents" destination="Oc0-cF-kBu" collectionClass="NSMutableArray" id="F1q-aL-z7O"/>
+                        <outletCollection property="digitComponents" destination="5Eq-Pw-cWh" collectionClass="NSMutableArray" id="pky-xD-WeN"/>
+                        <outletCollection property="digitComponents" destination="5SQ-c2-gk4" collectionClass="NSMutableArray" id="qDo-eU-e25"/>
+                        <outletCollection property="digitComponents" destination="5Nx-OZ-lby" collectionClass="NSMutableArray" id="Kg4-hl-mYn"/>
+                        <outletCollection property="digitComponents" destination="y76-Aj-Tfv" collectionClass="NSMutableArray" id="A6S-dB-y2H"/>
+                        <outletCollection property="digitComponents" destination="R6R-Rl-kZH" collectionClass="NSMutableArray" id="Xnj-hk-ysY"/>
+                        <segue destination="baL-gj-ddF" kind="show" identifier="gotoHome" id="iaw-lj-0d7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="79.6875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EBq-9A-pK0">
+            <objects>
+                <viewController id="baL-gj-ddF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Pp-0f-0Qu" customClass="home">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nAN-um-y4E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5dD-Mv-Rsg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30W-hs-Jdn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qZm-6Q-jFv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="poC-e0-CoB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xgg-za-0vI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xtt-9B-31G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sl4-kx-qjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
